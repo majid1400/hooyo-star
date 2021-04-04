@@ -21,7 +21,7 @@ class HooyoStarPro
     public function init(){
         register_activation_hook( __FILE__, [$this, 'activation'] );
         register_deactivation_hook( __FILE__, [$this, 'deactivation'] );
-        
+        $this->start_router();
     }
 
     public function define_constants()
@@ -36,6 +36,11 @@ class HooyoStarPro
 
     public function deactivation()
     {
+    }
+
+    private function start_router(){
+        include "router.php";
+        new Router;
     }
 }
 
