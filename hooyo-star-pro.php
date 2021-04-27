@@ -18,16 +18,21 @@ class HooyoStarPro
         $this->init();
     }
 
-    public function init(){
-        register_activation_hook( __FILE__, [$this, 'activation'] );
-        register_deactivation_hook( __FILE__, [$this, 'deactivation'] );
+    public function init()
+    {
+        register_activation_hook(__FILE__, [$this, 'activation']);
+        register_deactivation_hook(__FILE__, [$this, 'deactivation']);
         $this->start_router();
+        $this->admin();
     }
 
     public function define_constants()
     {
         define('HSP_DIR', plugin_dir_path(__FILE__));
         define('HSP_URL', plugin_dir_url(__FILE__));
+        define('HSP_ASSET_URL', HSP_URL.'/assets/');
+        define('HSP_VIEWS', HSP_DIR.DIRECTORY_SEPARATOR.'views/');
+        define('HSP_OPTION', HSP_DIR.DIRECTORY_SEPARATOR.'options-panel/');
     }
 
     public function activation()
@@ -38,9 +43,20 @@ class HooyoStarPro
     {
     }
 
-    private function start_router(){
+    private function start_router()
+    {
         include "router.php";
         new Router;
+    }
+
+    private function admin()
+    {
+        if (is_admin()) {
+            include HSP_DIR . "options-panel" . DIRECTORY_SEPARATOR .'index.php';
+        }else{
+	        include HSP_OPTION.'user/shortcode/main.php';
+	        include HSP_OPTION.'user/shortcode/chart.php';
+        }
     }
 }
 
