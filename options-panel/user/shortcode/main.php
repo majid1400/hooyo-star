@@ -15,8 +15,18 @@ function handler_result_hooyo_star_pro() {
 			$data_users_test = $wpdb->get_results(
 				"SELECT * FROM {$wpdb->prefix}data_form_hooyo_star WHERE user_id = {$id}"
 			);
+			$user_old = false;
 
-			$status_user = $data_users_test[0]->status_user;
+			if ($data_users_test[0]->statistic_ref_id == 0){
+                $user_old = true;
+                $status_user = $data_users_test[0]->status_user;
+            }else{
+                $new_test = unserialize( $data_users_test[0]->status_date )["date_1"]["show_user"];
+                $status_user = ($new_test!='yes')?0:1;
+            }
+
+
+//			$status_user = $data_users_test[0]->status_user;
 			$status_month_2  = $data_users_test[0]->status_month_2;
 			$status_month_3  = $data_users_test[0]->status_month_3;
 			$status_month_4  = $data_users_test[0]->status_month_4;
@@ -25,7 +35,12 @@ function handler_result_hooyo_star_pro() {
 
 
 			if ( $status_user == 1 ) {
-				include HSP_OPTION . 'user/resulte_test.php';
+			    if ($user_old){
+
+                    include HSP_OPTION . 'user/resulte_old.php';
+                }else{
+                    include HSP_OPTION . 'user/resulte_test.php';
+                }
 			} else {
 				echo 'تست شما در حال بررسی می باشد تا 48 ساعت آینده جواب تست آماده خواهد شد';
 			}

@@ -70,64 +70,64 @@ class DBHandler {
 		];
 		foreach ( $questions as $question ) {
 			$question_id = $question->question_id;
-			if ( $question_id == 136 OR $question_id == 137 OR $question_id == 138 OR $question_id == 139
-			     OR $question_id == 182 OR $question_id == 141 OR $question_id == 142 OR $question_id == 143 ) {
+
+			if ( $question_id == 306 OR $question_id == 309 OR $question_id == 312 OR $question_id == 315
+			     OR $question_id == 318 OR $question_id == 321 OR $question_id == 186 OR $question_id == 189 OR $question_id == 288 OR $question_id == 291 ) {
 				$arr['kalami'] += $question->points;
 			}
-			if ( $question_id == 104 OR $question_id == 105 OR $question_id == 106 OR $question_id == 107
-			     OR $question_id == 144 OR $question_id == 145 OR $question_id == 146 OR $question_id == 147 ) {
-
+			if ( $question_id == 327 OR $question_id == 330 OR $question_id == 453 OR $question_id == 336
+			     OR $question_id == 339 OR $question_id == 342 OR $question_id == 294 OR $question_id == 297  OR $question_id == 300  OR $question_id == 303 ) {
 				$arr['logical'] += $question->points;
 			}
-			if ( $question_id == 108 OR $question_id == 109 OR $question_id == 110 OR $question_id == 111
-			     OR $question_id == 151 OR $question_id == 150 OR $question_id == 149 OR $question_id == 148 ) {
+			if ( $question_id == 345 OR $question_id == 348 OR $question_id == 351 OR $question_id == 354
+			     OR $question_id == 357 OR $question_id == 360 OR $question_id == 276 OR $question_id == 279 OR $question_id == 282 OR $question_id == 285 ) {
 				$arr['pic'] += $question->points;
 			}
-			if ( $question_id == 112 OR $question_id == 113 OR $question_id == 114 OR $question_id == 115
-			     OR $question_id == 155 OR $question_id == 154 OR $question_id == 153 OR $question_id == 152 ) {
+			if ( $question_id == 363 OR $question_id == 366 OR $question_id == 369 OR $question_id == 372
+			     OR $question_id == 375 OR $question_id == 378 OR $question_id == 264 OR $question_id == 267 OR $question_id == 270 OR $question_id == 273 ) {
 				$arr['motion'] += $question->points;
 			}
-			if ( $question_id == 116 OR $question_id == 117 OR $question_id == 118 OR $question_id == 119
-			     OR $question_id == 159 OR $question_id == 158 OR $question_id == 157 OR $question_id == 156 ) {
+			if ( $question_id == 381 OR $question_id == 384 OR $question_id == 387 OR $question_id == 390
+			     OR $question_id == 393 OR $question_id == 396 OR $question_id == 252 OR $question_id == 255 OR $question_id == 258 OR $question_id == 261 ) {
 				$arr['music'] += $question->points;
 			}
-			if ( $question_id == 120 OR $question_id == 121 OR $question_id == 122 OR $question_id == 123
-			     OR $question_id == 160 OR $question_id == 161 OR $question_id == 162 OR $question_id == 163 ) {
+			if ( $question_id == 399 OR $question_id == 456 OR $question_id == 405 OR $question_id == 408
+			     OR $question_id == 411 OR $question_id == 414 OR $question_id == 240 OR $question_id == 243 OR $question_id == 246 OR $question_id == 249 ) {
 				$arr['miyanFardi'] += $question->points;
 			}
-			if ( $question_id == 124 OR $question_id == 125 OR $question_id == 126 OR $question_id == 127
-			     OR $question_id == 164 OR $question_id == 165 OR $question_id == 166 OR $question_id == 167 ) {
+			if ( $question_id == 417 OR $question_id == 420 OR $question_id == 459 OR $question_id == 426
+			     OR $question_id == 429 OR $question_id == 432 OR $question_id == 228 OR $question_id == 231 OR $question_id == 234 OR $question_id == 237 ) {
 				$arr['daronFardi'] += $question->points;
 			}
-			if ( $question_id == 128 OR $question_id == 129 OR $question_id == 130 OR $question_id == 131
-			     OR $question_id == 168 OR $question_id == 169 OR $question_id == 170 OR $question_id == 171 ) {
+			if ( $question_id == 435 OR $question_id == 438 OR $question_id == 441 OR $question_id == 444
+			     OR $question_id == 447 OR $question_id == 450 OR $question_id == 225 OR $question_id == 222 OR $question_id == 219 OR $question_id == 216 ) {
 				$arr['naturalist'] += $question->points;
 			}
-			if ( $question_id == 175 ) {
+			if ( $question_id == 195 ) {
 				$q          = 'فرزند شما از انجام چه کار‌ها و فعالیت‌هایی لذت می‌برد؟';
 				$arr['q33'] = [ $q, json_decode( $question->answer_data, true )[0] ];
 			}
-			if ( $question_id == 176 ) {
+			if ( $question_id == 198 ) {
 				$q          = 'فرزند شما از انجام چه کار‌هایی اجتناب می‌کند؟';
 				$arr['q34'] = [ $q, json_decode( $question->answer_data, true )[0] ];
 			}
-			if ( $question_id == 177 ) {
+			if ( $question_id == 201 ) {
 				$q          = 'فرزندتان را چگونه فردی توصیف می‌کنید؟';
 				$arr['q35'] = [ $q, json_decode( $question->answer_data, true )[0] ];
 			}
-			if ( $question_id == 178 ) {
+			if ( $question_id == 204 ) {
 				$q          = 'چه چیز‌هایی به فرزندتان انگیزه می‌دهد؟';
 				$arr['q36'] = [ $q, json_decode( $question->answer_data, true )[0] ];
 			}
-			if ( $question_id == 179 ) {
+			if ( $question_id == 207 ) {
 				$q          = 'فرزندتان دوست دارد وقتی بزرگ شد چه کاره شود؟';
 				$arr['q37'] = [ $q, json_decode( $question->answer_data, true )[0] ];
 			}
-			if ( $question_id == 180 ) {
+			if ( $question_id == 210 ) {
 				$q          = 'چه چیز‌هایی در فرزندتان انگیزه‌ای ایجاد نمی‌کند؟';
 				$arr['q38'] = [ $q, json_decode( $question->answer_data, true )[0] ];
 			}
-			if ( $question_id == 181 ) {
+			if ( $question_id == 213 ) {
 				$q          = 'فرزندتان چه بازی‌هایی داشته است؟';
 				$arr['q39'] = [ $q, json_decode( $question->answer_data, true )[0] ];
 			}
@@ -142,14 +142,23 @@ class DBHandler {
 		$result = $this->wp->get_results(
 			"SELECT * FROM {$this->prefix}data_form_hooyo_star WHERE statistic_ref_id = {$this->ref_id}"
 		);
-
 		if ( empty( $result ) ) {
 			$housh = [];
 			$age   = [];
 			$status_date = $this->get_date_d();
 
+
 			return [ $housh, $age, $status_date ];
 		}
+
+		if (unserialize( $result[0]->status_date )["date_1"]["show_user"] == "no"){
+            $housh       = unserialize( $result[0]->data_form_hooyo_star )[0];
+            $age         = unserialize( $result[0]->data_form_hooyo_star )[1];
+            $status_date = $this->get_date_d();
+
+
+            return [ $housh, $age, $status_date ];
+        }
 
 
 		$housh       = unserialize( $result[0]->data_form_hooyo_star )[0];
