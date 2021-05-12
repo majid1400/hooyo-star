@@ -1,68 +1,53 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Majid
- * Date: 27/04/2021
- * Time: 10:42 PM
- */
 
+class APIWOO
+{
 
-require __DIR__ . '/vendor/autoload.php';
+    private $url;
+    private $arr_header;
 
-use Automattic\WooCommerce\Client;
+    public function __construct()
+    {
+        $this->init();
+    }
 
-$store_url = 'http://example.com';
-$endpoint = '/wc-auth/v1/authorize';
-$params = [
-	'app_name' => 'My App Name',
-	'scope' => 'write',
-	'user_id' => 123,
-	'return_url' => 'http://app.com',
-	'callback_url' => 'https://app.com'
-];
-$query_string = http_build_query( $params );
+    public function init()
+    {
+        $hsp_settings = get_option('hsp_settings', []);
+        $options = $hsp_settings['api'];
+        $base64Credentials = base64_encode($options['consumer_key'] . ":" . $options['consumer_password']);
+        $this->arr_header = "Authorization: Basic " . $base64Credentials;
+        $this->url = 'https://hooyo.ir/';
+    }
 
-echo $store_url . $endpoint . '?' . $query_string;
-class APIWOO {
+    public function get($endpoint, $method, $data)
+    {
+        $curl = curl_init();
 
-	private $url;
-	private $consumer_key;
-	private $secret_key;
-	private $version;
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => $this->url . 'wp-json/star/v1/' . $endpoint,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => $method,
+            CURLOPT_POSTFIELDS => json_encode($data),
+            CURLOPT_HTTPHEADER => array(
+                $this->arr_header,
+                'Content-Type: application/json'
+            ),
+        ));
 
-	public function __construct( $url, $consumer_key, $secret_key ) {
-		$this->url          = $url;
-		$this->consumer_key = $consumer_key;
-		$this->secret_key   = $secret_key;
-		$this->version      = 'v3';
-		$this->init();
-		$this->get_woo();
+        $response = curl_exec($curl);
 
-	}
+        if ($response === false) {
+            return "Error in cURL : " . curl_error($curl);
+        }
 
-	public function init() {
-		$woocommerce = new Client(
-			$this->url,
-			$this->consumer_key,
-			$this->secret_key,
-			[
-				'version' => $this->version // WooCommerce API version
-			]
-		);
+        curl_close($curl);
 
-		return $woocommerce;
-	}
-
-	public function get_woo() {
-		var_dump('<pre>');
-		var_export($this->init()->get(''));
-		var_dump('</pre>');
-	}
-
-
+        return json_decode($response);
+    }
 }
-
-$hsp_settings = get_option( 'hsp_settings', [] );
-$options      = $hsp_settings['api'];
-
-new APIWOO( 'https://hooyo.ir/', $options['consumer_key'], $options['consumer_password'] );
