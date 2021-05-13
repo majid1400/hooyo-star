@@ -4,14 +4,14 @@ include "Handler.php";
 include HSP_DIR . 'view.class.php';
 
 
-class HooyostarStarHandler extends Handler
+class EditHandler extends Handler
 {
     public function __construct()
     {
-        
     }
+
     public function index()
     {
-        View::load('panel/dashboard/index.php');
+        View::load('panel.edit.index');
     }
 }

@@ -3,13 +3,15 @@
 include "Handler.php";
 include HSP_DIR . 'view.class.php';
 
-class ResultStarHandler extends Handler
+
+class GuideHandler extends Handler
 {
     public function __construct()
     {
     }
+
     public function index()
     {
-        View::load('panel/result/index.php');
+        View::load('panel.guide.index');
     }
 }

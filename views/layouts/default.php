@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo HSP_ASSET_URL?>images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo HSP_ASSET_URL ?>images/favicon.png">
     <title>LaraCMS</title>
-    <link href="<?php echo HSP_ASSET_URL?>css/lib/bootstrap/bootstrap-rtl.min.css" rel="stylesheet">
-    <link href="<?php echo HSP_ASSET_URL?>css/helper.css" rel="stylesheet">
-    <link href="<?php echo HSP_ASSET_URL?>css/fonts.css" rel="stylesheet">
-    <link href="<?php echo HSP_ASSET_URL?>css/style.css" rel="stylesheet">
+    <link href="<?php echo HSP_ASSET_URL ?>css/lib/bootstrap/bootstrap-rtl.min.css" rel="stylesheet">
+    <link href="<?php echo HSP_ASSET_URL ?>css/helper.css" rel="stylesheet">
+    <link href="<?php echo HSP_ASSET_URL ?>css/fonts.css" rel="stylesheet">
+    <link href="<?php echo HSP_ASSET_URL ?>css/style.css" rel="stylesheet">
 </head>
 <body>
 <!-- Preloader - style you can find in spinners.css -->
@@ -25,17 +25,17 @@
             <div class="navbar-header">
                 <a class="navbar-brand" href="index.html">
                     <!-- Logo icon -->
-                    <b><img src="<?php echo HSP_ASSET_URL?>images/logo.png" alt="homepage" class="dark-logo"/></b>
+                    <b><img src="<?php echo HSP_ASSET_URL ?>images/logo.png" alt="homepage" class="dark-logo"/></b>
                     <!--End Logo icon -->
                     <!-- Logo text -->
-                    <span><img src="<?php echo HSP_ASSET_URL?>images/logo-text.png" alt="homepage" class="dark-logo"/></span>
+                    <span><img src="<?php echo HSP_ASSET_URL ?>images/logo-text.png" alt="homepage" class="dark-logo"/></span>
                 </a>
             </div>
             <!-- End Logo -->
             <div class="navbar-collapse">
                 <!-- toggle and nav items -->
                 <ul class="navbar-nav mr-auto mt-md-0">
-                    
+
                 </ul>
                 <!-- User profile and search -->
                 <ul class="navbar-nav my-lg-0">
@@ -43,10 +43,10 @@
                     <!-- Search -->
                     <li class="nav-item hidden-sm-down search-box"><a class="nav-link hidden-sm-down text-muted  "
                                                                       href="javascript:void(0)"><i
-                            class="ti-search"></i></a>
+                                    class="ti-search"></i></a>
                         <form class="app-search">
                             <input type="text" class="form-control" placeholder="Search here"> <a class="srh-btn"><i
-                                class="ti-close"></i></a></form>
+                                        class="ti-close"></i></a></form>
                     </li>
                     <!-- Comment -->
                     <li class="nav-item dropdown">
@@ -100,7 +100,7 @@
                                 </li>
                                 <li>
                                     <a class="nav-link text-center" href="javascript:void(0);"> <strong>Check all
-                                        notifications</strong> <i class="fa fa-angle-right"></i> </a>
+                                            notifications</strong> <i class="fa fa-angle-right"></i> </a>
                                 </li>
                             </ul>
                         </div>
@@ -121,50 +121,56 @@
                                     <div class="message-center">
                                         <!-- Message -->
                                         <a href="#">
-                                            <div class="user-img"><img src="<?php echo HSP_ASSET_URL?>images/users/5.jpg" alt="user"
-                                                                       class="img-circle"> <span
-                                                    class="profile-status online pull-right"></span></div>
+                                            <div class="user-img"><img
+                                                        src="<?php echo HSP_ASSET_URL ?>images/users/5.jpg" alt="user"
+                                                        class="img-circle"> <span
+                                                        class="profile-status online pull-right"></span></div>
                                             <div class="mail-contnet">
                                                 <h5>Michael Qin</h5> <span
-                                                    class="mail-desc">Just see the my admin!</span> <span class="time">9:30 AM</span>
+                                                        class="mail-desc">Just see the my admin!</span> <span
+                                                        class="time">9:30 AM</span>
                                             </div>
                                         </a>
                                         <!-- Message -->
                                         <a href="#">
-                                            <div class="user-img"><img src="<?php echo HSP_ASSET_URL?>images/users/2.jpg" alt="user"
-                                                                       class="img-circle"> <span
-                                                    class="profile-status busy pull-right"></span></div>
+                                            <div class="user-img"><img
+                                                        src="<?php echo HSP_ASSET_URL ?>images/users/2.jpg" alt="user"
+                                                        class="img-circle"> <span
+                                                        class="profile-status busy pull-right"></span></div>
                                             <div class="mail-contnet">
                                                 <h5>John Doe</h5> <span
-                                                    class="mail-desc">I've sung a song! See you at</span> <span
-                                                    class="time">9:10 AM</span>
+                                                        class="mail-desc">I've sung a song! See you at</span> <span
+                                                        class="time">9:10 AM</span>
                                             </div>
                                         </a>
                                         <!-- Message -->
                                         <a href="#">
-                                            <div class="user-img"><img src="<?php echo HSP_ASSET_URL?>images/users/3.jpg" alt="user"
-                                                                       class="img-circle"> <span
-                                                    class="profile-status away pull-right"></span></div>
+                                            <div class="user-img"><img
+                                                        src="<?php echo HSP_ASSET_URL ?>images/users/3.jpg" alt="user"
+                                                        class="img-circle"> <span
+                                                        class="profile-status away pull-right"></span></div>
                                             <div class="mail-contnet">
                                                 <h5>Mr. John</h5> <span class="mail-desc">I am a singer!</span> <span
-                                                    class="time">9:08 AM</span>
+                                                        class="time">9:08 AM</span>
                                             </div>
                                         </a>
                                         <!-- Message -->
                                         <a href="#">
-                                            <div class="user-img"><img src="<?php echo HSP_ASSET_URL?>images/users/4.jpg" alt="user"
-                                                                       class="img-circle"> <span
-                                                    class="profile-status offline pull-right"></span></div>
+                                            <div class="user-img"><img
+                                                        src="<?php echo HSP_ASSET_URL ?>images/users/4.jpg" alt="user"
+                                                        class="img-circle"> <span
+                                                        class="profile-status offline pull-right"></span></div>
                                             <div class="mail-contnet">
                                                 <h5>Michael Qin</h5> <span
-                                                    class="mail-desc">Just see the my admin!</span> <span class="time">9:02 AM</span>
+                                                        class="mail-desc">Just see the my admin!</span> <span
+                                                        class="time">9:02 AM</span>
                                             </div>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <a class="nav-link text-center" href="javascript:void(0);"> <strong>See all
-                                        e-Mails</strong> <i class="fa fa-angle-right"></i> </a>
+                                            e-Mails</strong> <i class="fa fa-angle-right"></i> </a>
                                 </li>
                             </ul>
                         </div>
@@ -173,8 +179,9 @@
                     <!-- Profile -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false"><img src="<?php echo HSP_ASSET_URL?>images/users/5.jpg" alt="user"
-                                                                           class="profile-pic"/></a>
+                           aria-haspopup="true" aria-expanded="false"><img
+                                    src="<?php echo HSP_ASSET_URL ?>images/users/5.jpg" alt="user"
+                                    class="profile-pic"/></a>
                         <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                             <ul class="dropdown-user">
                                 <li><a href="#"><i class="ti-user"></i> پروفایل کاربری</a></li>
@@ -197,45 +204,35 @@
                 <ul id="sidebarnav">
                     <li class="nav-devider"></li>
                     <li class="nav-label"></li>
-                    <li><a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-tachometer"></i>
-                        <span
-                                class="hide-menu">پیشخوان
+                    <li><a href="/dashboard" aria-expanded="false"><i class="fa fa-tachometer"></i>
+                            <span
+                                    class="hide-menu">پیشخوان
                         </span></a>
-                        <ul aria-expanded="false" class="collapse">
-                            <li><a href="index.html">آمار </a></li>
-                            <li><a href="index1.html">وضعیت </a></li>
-                        </ul>
+
                     </li>
                     <li><a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-users"></i><span
-                            class="hide-menu">کاربران</span></a>
+                                    class="hide-menu">فعالیت و تخفیف</span></a>
                         <ul aria-expanded="false" class="collapse">
-                            <li><a href="email-compose.html">لیست کاربران</a></li>
-                            <li><a href="email-read.html">کاربر جدید</a></li>
+                            <li><a href="/dashboard/discount">تخفیف های من</a></li>
+                            <li><a href="/dashboard/messages">پیام های من</a></li>
+                            <li><a href="/dashboard/wallet">کیف پول من</a></li>
+                            <li><a href="/dashboard/order">سفارش های من</a></li>
                         </ul>
                     </li>
-                    <li><a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-book"></i><span
-                            class="hide-menu">نوشته ها
+                    <li><a href="/dashboard/guide" aria-expanded="false"><i class="fa fa-book"></i><span
+                                    class="hide-menu">راهنمای اشتراک
                         </span></a>
-                        <ul aria-expanded="false" class="collapse">
-                            <li><a href="ui-alert.html">لیست نوشته ها</a></li>
-                            <li><a href="ui-button.html">نوشته جدید</a></li>
-                        </ul>
                     </li>
-                    <li><a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-tags"></i><span
-                            class="hide-menu">دسته بندی ها
+                    <li><a href="/dashboard/result" aria-expanded="false"><i class="fa fa-book"></i><span
+                                    class="hide-menu">نتیجه تست
                         </span></a>
-                        <ul aria-expanded="false" class="collapse">
-                            <li><a href="uc-calender.html">لیست دسته بندی ها</a></li>
-                            <li><a href="uc-datamap.html">دسته بندی جدید</a></li>
-                        </ul>
                     </li>
+
                     <li><a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-cog"></i><span
-                            class="hide-menu">تنظیمات</span></a>
+                                    class="hide-menu">تنظیمات</span></a>
                         <ul aria-expanded="false" class="collapse">
-                            <li><a href="table-bootstrap.html">عمومی</a></li>
-                            <li><a href="table-datatable.html">نوشتن</a></li>
-                            <li><a href="table-datatable.html">خواندن</a></li>
-                            <li><a href="table-datatable.html">کاربران</a></li>
+                            <li><a href="/dashboard/edit">ویرایش اطلاعات کاربری</a></li>
+                            <li><a href="/dashboard/upgrade">ارتقاء حساب کاربری</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -265,7 +262,7 @@
         <div class="container-fluid">
             <!-- Start Page Content -->
             <div class="row">
-                <?php include HSP_VIEWS.$view; ?>
+                <?php include HSP_VIEWS . $view; ?>
             </div>
             <!-- /# row -->
             <!-- End PAge Content -->
@@ -276,17 +273,17 @@
 </div>
 <!-- End Wrapper -->
 
-<script src="<?php echo HSP_ASSET_URL?>js/lib/jquery/jquery.min.js"></script>
+<script src="<?php echo HSP_ASSET_URL ?>js/lib/jquery/jquery.min.js"></script>
 <!-- Bootstrap tether Core JavaScript -->
-<script src="<?php echo HSP_ASSET_URL?>js/lib/bootstrap/js/popper.min.js"></script>
-<script src="<?php echo HSP_ASSET_URL?>js/lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="<?php echo HSP_ASSET_URL ?>js/lib/bootstrap/js/popper.min.js"></script>
+<script src="<?php echo HSP_ASSET_URL ?>js/lib/bootstrap/js/bootstrap.min.js"></script>
 <!-- slimscrollbar scrollbar JavaScript -->
-<script src="<?php echo HSP_ASSET_URL?>js/jquery.slimscroll.js"></script>
+<script src="<?php echo HSP_ASSET_URL ?>js/jquery.slimscroll.js"></script>
 <!--Menu sidebar -->
-<script src="<?php echo HSP_ASSET_URL?>js/sidebarmenu.js"></script>
+<script src="<?php echo HSP_ASSET_URL ?>js/sidebarmenu.js"></script>
 <!--stickey kit -->
-<script src="<?php echo HSP_ASSET_URL?>js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
+<script src="<?php echo HSP_ASSET_URL ?>js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
 <!--Custom JavaScript -->
-<script src="<?php echo HSP_ASSET_URL?>js/custom.min.js"></script>
+<script src="<?php echo HSP_ASSET_URL ?>js/custom.min.js"></script>
 </body>
 </html>

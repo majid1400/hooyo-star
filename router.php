@@ -15,7 +15,7 @@ class Router
 
     private function dispatch_request($request_uri)
     {
-        if (!strpos($request_uri,'hooyostar')){
+        if (!strpos($request_uri, 'dashboard')) {
             return;
         }
         $handler = $this->parse_uri($request_uri);
@@ -38,12 +38,12 @@ class Router
 
     private function format_handler_name($handler)
     {
-        return ucfirst($handler).'StarHandler';
+        return ucfirst($handler) . 'Handler';
     }
 
     private function get_handler_file($handler_name)
     {
-        return HSP_DIR . 'panelUser'.DIRECTORY_SEPARATOR.'handlers'.DIRECTORY_SEPARATOR.$handler_name.'.php';
+        return HSP_DIR . 'panelUser' . DIRECTORY_SEPARATOR . 'handlers' . DIRECTORY_SEPARATOR . $handler_name . '.php';
     }
 
     private function is_handler_valid($handler_name)
