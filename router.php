@@ -18,6 +18,9 @@ class Router
         if (!strpos($request_uri, 'dashboard')) {
             return;
         }
+        if (!is_user_logged_in()){
+            return;
+        }
         $handler = $this->parse_uri($request_uri);
         $handler_name = $this->format_handler_name($handler);
         if (!$this->is_handler_valid($handler_name)) {

@@ -10,10 +10,25 @@ class DashboardHandler extends Handler
     {
 
     }
+
     public function index()
     {
-        View::load('panel.dashboard.index',[
-            "name" => "majid"
-        ]);
+        $params = [
+            "childs" => $this->get_question()
+        ];
+        View::load('panel.dashboard.index', $params);
+    }
+
+    public function get_question()
+    {
+        global $wpdb;
+        $current_id = get_current_user_id();
+
+        $user_number_question = $wpdb->get_results("
+                SELECT `child_name`
+				FROM {$wpdb->prefix}data_form_hooyo_star
+				WHERE user_id={$current_id}");
+        return $user_number_question;
+
     }
 }

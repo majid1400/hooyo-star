@@ -1,289 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo HSP_ASSET_URL ?>images/favicon.png">
-    <title>LaraCMS</title>
-    <link href="<?php echo HSP_ASSET_URL ?>css/lib/bootstrap/bootstrap-rtl.min.css" rel="stylesheet">
-    <link href="<?php echo HSP_ASSET_URL ?>css/helper.css" rel="stylesheet">
-    <link href="<?php echo HSP_ASSET_URL ?>css/fonts.css" rel="stylesheet">
-    <link href="<?php echo HSP_ASSET_URL ?>css/style.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>پنل مدیریت | هویو استار</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="<?php echo HSP_ASSET_URL ?>fonts/font-awesome.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="<?php echo HSP_ASSET_URL ?>css/adminlte.min.css">
+
+    <!-- bootstrap rtl -->
+    <link rel="stylesheet" href="<?php echo HSP_ASSET_URL ?>css/bootstrap-rtl.min.css">
+    <!-- template rtl version -->
+    <link rel="stylesheet" href="<?php echo HSP_ASSET_URL ?>css/custom-style.css">
+
 </head>
-<body>
-<!-- Preloader - style you can find in spinners.css -->
-<div class="preloader">
-    <svg class="circular" viewBox="25 25 50 50">
-        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
-    </svg>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand bg-white navbar-light border-bottom">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
+            </li>
+<!--            <li class="nav-item d-none d-sm-inline-block">-->
+<!--                <a href="index3.html" class="nav-link">خانه</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item d-none d-sm-inline-block">-->
+<!--                <a href="#" class="nav-link">تماس با ما</a>-->
+<!--            </li>-->
+        </ul>
+
+        <!-- SEARCH FORM -->
+<!--        <form class="form-inline ml-3">-->
+<!--            <div class="input-group input-group-sm">-->
+<!--                <input class="form-control form-control-navbar" type="search" placeholder="جستجو" aria-label="Search">-->
+<!--                <div class="input-group-append">-->
+<!--                    <button class="btn btn-navbar" type="submit">-->
+<!--                        <i class="fa fa-search"></i>-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </form>-->
+
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <a href="#" class="brand-link">
+            <!--            <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"-->
+            <!--                 style="opacity: .8">-->
+            <span class="brand-text font-weight-light">پنل مدیریت</span>
+        </a>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div>
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="https://www.gravatar.com/avatar/52f0fbcbedee04a121cba8dad1174462?s=200&d=mm&r=g"
+                             class="img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block">مجید بهنام فرد</a>
+                    </div>
+                </div>
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+
+                        <li class="nav-item">
+                            <a href="/dashboard" class="nav-link active">
+                                <i class="nav-icon fa fa-dashboard"></i>
+                                <p>
+                                    پیشخوان
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fa fa-pie-chart"></i>
+                                <p>
+                                    فعالیت و تخفیف
+                                    <i class="right fa fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/dashboard/discount" class="nav-link">
+                                        <i class="fa fa-circle-o nav-icon"></i>
+                                        <p>تخفیف های من</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/dashboard/messages" class="nav-link">
+                                        <i class="fa fa-circle-o nav-icon"></i>
+                                        <p>پیام های من</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/dashboard/wallet" class="nav-link">
+                                        <i class="fa fa-circle-o nav-icon"></i>
+                                        <p>کیف پول من</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/dashboard/order" class="nav-link">
+                                        <i class="fa fa-circle-o nav-icon"></i>
+                                        <p>سفارش های من</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/dashboard/guide" class="nav-link">
+                                <i class="nav-icon fa fa-file"></i>
+                                <p>راهنمای اشتراک</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/dashboard/result" class="nav-link">
+                                <i class="nav-icon fa fa-file"></i>
+                                <p>نتیجه تست</p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fa fa-cog"></i>
+                                <p>
+                                    تنظیمات
+                                    <i class="right fa fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/dashboard/edit" class="nav-link">
+                                        <i class="fa fa-circle-o nav-icon"></i>
+                                        <p>ویرایش اطلاعات کاربری</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/dashboard/upgrade" class="nav-link">
+                                        <i class="fa fa-circle-o nav-icon"></i>
+                                        <p>ارتقاء حساب کاربری</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+        </div>
+        <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0 text-dark">پیشخوان</h1>
+                    </div><!-- /.col -->
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-left">
+                            <li class="breadcrumb-item"><a href="#">خانه</a></li>
+                            <li class="breadcrumb-item active">پیشخوان</li>
+                        </ol>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+
+        <!-- Main content -->
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <?php include HSP_VIEWS . $view; ?>
+                </div>
+                <!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+        <div class="p-3">
+            <h5>Title</h5>
+            <p>Sidebar content</p>
+        </div>
+    </aside>
+    <!-- /.control-sidebar -->
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+
+    </footer>
 </div>
-<!-- Main wrapper  -->
-<div id="main-wrapper">
-    <!-- header header  -->
-    <div class="header">
-        <nav class="navbar top-navbar navbar-expand-md navbar-light">
-            <!-- Logo -->
-            <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">
-                    <!-- Logo icon -->
-                    <b><img src="<?php echo HSP_ASSET_URL ?>images/logo.png" alt="homepage" class="dark-logo"/></b>
-                    <!--End Logo icon -->
-                    <!-- Logo text -->
-                    <span><img src="<?php echo HSP_ASSET_URL ?>images/logo-text.png" alt="homepage" class="dark-logo"/></span>
-                </a>
-            </div>
-            <!-- End Logo -->
-            <div class="navbar-collapse">
-                <!-- toggle and nav items -->
-                <ul class="navbar-nav mr-auto mt-md-0">
+<!-- ./wrapper -->
 
-                </ul>
-                <!-- User profile and search -->
-                <ul class="navbar-nav my-lg-0">
+<!-- REQUIRED SCRIPTS -->
+<script>
 
-                    <!-- Search -->
-                    <li class="nav-item hidden-sm-down search-box"><a class="nav-link hidden-sm-down text-muted  "
-                                                                      href="javascript:void(0)"><i
-                                    class="ti-search"></i></a>
-                        <form class="app-search">
-                            <input type="text" class="form-control" placeholder="Search here"> <a class="srh-btn"><i
-                                        class="ti-close"></i></a></form>
-                    </li>
-                    <!-- Comment -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-muted text-muted  " href="#" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false"> <i class="fa fa-bell"></i>
-                            <div class="notify"><span class="heartbit"></span> <span class="point"></span></div>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right mailbox animated zoomIn">
-                            <ul>
-                                <li>
-                                    <div class="drop-title">Notifications</div>
-                                </li>
-                                <li>
-                                    <div class="message-center">
-                                        <!-- Message -->
-                                        <a href="#">
-                                            <div class="btn btn-danger btn-circle m-r-10"><i class="fa fa-link"></i>
-                                            </div>
-                                            <div class="mail-contnet">
-                                                <h5>This is title</h5> <span class="mail-desc">Just see the my new admin!</span>
-                                                <span class="time">9:30 AM</span>
-                                            </div>
-                                        </a>
-                                        <!-- Message -->
-                                        <a href="#">
-                                            <div class="btn btn-success btn-circle m-r-10"><i class="ti-calendar"></i>
-                                            </div>
-                                            <div class="mail-contnet">
-                                                <h5>This is another title</h5> <span class="mail-desc">Just a reminder that you have event</span>
-                                                <span class="time">9:10 AM</span>
-                                            </div>
-                                        </a>
-                                        <!-- Message -->
-                                        <a href="#">
-                                            <div class="btn btn-info btn-circle m-r-10"><i class="ti-settings"></i>
-                                            </div>
-                                            <div class="mail-contnet">
-                                                <h5>This is title</h5> <span class="mail-desc">You can customize this template as you want</span>
-                                                <span class="time">9:08 AM</span>
-                                            </div>
-                                        </a>
-                                        <!-- Message -->
-                                        <a href="#">
-                                            <div class="btn btn-primary btn-circle m-r-10"><i class="ti-user"></i></div>
-                                            <div class="mail-contnet">
-                                                <h5>This is another title</h5> <span class="mail-desc">Just see the my admin!</span>
-                                                <span class="time">9:02 AM</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a class="nav-link text-center" href="javascript:void(0);"> <strong>Check all
-                                            notifications</strong> <i class="fa fa-angle-right"></i> </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- End Comment -->
-                    <!-- Messages -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-muted  " href="#" id="2" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false"> <i class="fa fa-envelope"></i>
-                            <div class="notify"><span class="heartbit"></span> <span class="point"></span></div>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right mailbox animated zoomIn" aria-labelledby="2">
-                            <ul>
-                                <li>
-                                    <div class="drop-title">You have 4 new messages</div>
-                                </li>
-                                <li>
-                                    <div class="message-center">
-                                        <!-- Message -->
-                                        <a href="#">
-                                            <div class="user-img"><img
-                                                        src="<?php echo HSP_ASSET_URL ?>images/users/5.jpg" alt="user"
-                                                        class="img-circle"> <span
-                                                        class="profile-status online pull-right"></span></div>
-                                            <div class="mail-contnet">
-                                                <h5>Michael Qin</h5> <span
-                                                        class="mail-desc">Just see the my admin!</span> <span
-                                                        class="time">9:30 AM</span>
-                                            </div>
-                                        </a>
-                                        <!-- Message -->
-                                        <a href="#">
-                                            <div class="user-img"><img
-                                                        src="<?php echo HSP_ASSET_URL ?>images/users/2.jpg" alt="user"
-                                                        class="img-circle"> <span
-                                                        class="profile-status busy pull-right"></span></div>
-                                            <div class="mail-contnet">
-                                                <h5>John Doe</h5> <span
-                                                        class="mail-desc">I've sung a song! See you at</span> <span
-                                                        class="time">9:10 AM</span>
-                                            </div>
-                                        </a>
-                                        <!-- Message -->
-                                        <a href="#">
-                                            <div class="user-img"><img
-                                                        src="<?php echo HSP_ASSET_URL ?>images/users/3.jpg" alt="user"
-                                                        class="img-circle"> <span
-                                                        class="profile-status away pull-right"></span></div>
-                                            <div class="mail-contnet">
-                                                <h5>Mr. John</h5> <span class="mail-desc">I am a singer!</span> <span
-                                                        class="time">9:08 AM</span>
-                                            </div>
-                                        </a>
-                                        <!-- Message -->
-                                        <a href="#">
-                                            <div class="user-img"><img
-                                                        src="<?php echo HSP_ASSET_URL ?>images/users/4.jpg" alt="user"
-                                                        class="img-circle"> <span
-                                                        class="profile-status offline pull-right"></span></div>
-                                            <div class="mail-contnet">
-                                                <h5>Michael Qin</h5> <span
-                                                        class="mail-desc">Just see the my admin!</span> <span
-                                                        class="time">9:02 AM</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a class="nav-link text-center" href="javascript:void(0);"> <strong>See all
-                                            e-Mails</strong> <i class="fa fa-angle-right"></i> </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- End Messages -->
-                    <!-- Profile -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false"><img
-                                    src="<?php echo HSP_ASSET_URL ?>images/users/5.jpg" alt="user"
-                                    class="profile-pic"/></a>
-                        <div class="dropdown-menu dropdown-menu-right animated zoomIn">
-                            <ul class="dropdown-user">
-                                <li><a href="#"><i class="ti-user"></i> پروفایل کاربری</a></li>
-                                <li><a href="#"><i class="ti-settings"></i> تننظیمات</a></li>
-                                <li><a href="#"><i class="fa fa-power-off"></i> خروج</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-    <!-- End header header -->
-    <!-- Left Sidebar  -->
-    <div class="right-sidebar">
-        <!-- Sidebar scroll-->
-        <div class="scroll-sidebar">
-            <!-- Sidebar navigation-->
-            <nav class="sidebar-nav">
-                <ul id="sidebarnav">
-                    <li class="nav-devider"></li>
-                    <li class="nav-label"></li>
-                    <li><a href="/dashboard" aria-expanded="false"><i class="fa fa-tachometer"></i>
-                            <span
-                                    class="hide-menu">پیشخوان
-                        </span></a>
-
-                    </li>
-                    <li><a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-users"></i><span
-                                    class="hide-menu">فعالیت و تخفیف</span></a>
-                        <ul aria-expanded="false" class="collapse">
-                            <li><a href="/dashboard/discount">تخفیف های من</a></li>
-                            <li><a href="/dashboard/messages">پیام های من</a></li>
-                            <li><a href="/dashboard/wallet">کیف پول من</a></li>
-                            <li><a href="/dashboard/order">سفارش های من</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/dashboard/guide" aria-expanded="false"><i class="fa fa-book"></i><span
-                                    class="hide-menu">راهنمای اشتراک
-                        </span></a>
-                    </li>
-                    <li><a href="/dashboard/result" aria-expanded="false"><i class="fa fa-book"></i><span
-                                    class="hide-menu">نتیجه تست
-                        </span></a>
-                    </li>
-
-                    <li><a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-cog"></i><span
-                                    class="hide-menu">تنظیمات</span></a>
-                        <ul aria-expanded="false" class="collapse">
-                            <li><a href="/dashboard/edit">ویرایش اطلاعات کاربری</a></li>
-                            <li><a href="/dashboard/upgrade">ارتقاء حساب کاربری</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <!-- End Sidebar navigation -->
-        </div>
-        <!-- End Sidebar scroll-->
-    </div>
-    <!-- End Left Sidebar  -->
-    <!-- Page wrapper  -->
-    <div class="page-wrapper">
-        <!-- Bread crumb -->
-        <div class="row page-titles">
-            <div class="col-md-7 align-self-center">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="javascript:void(0)">خانه</a></li>
-                    <li class="breadcrumb-item ">پیشخوان</li>
-                    <li class="breadcrumb-item active">آمار</li>
-                </ol>
-            </div>
-            <!--<div class="col-md-5 align-self-center">-->
-            <!--<h3 class="text-primary">پیشخوان</h3>-->
-            <!--</div>-->
-        </div>
-        <!-- End Bread crumb -->
-        <!-- Container fluid  -->
-        <div class="container-fluid">
-            <!-- Start Page Content -->
-            <div class="row">
-                <?php include HSP_VIEWS . $view; ?>
-            </div>
-            <!-- /# row -->
-            <!-- End PAge Content -->
-        </div>
-        <!-- End Container fluid  -->
-    </div>
-    <!-- End Page wrapper  -->
-</div>
-<!-- End Wrapper -->
-
-<script src="<?php echo HSP_ASSET_URL ?>js/lib/jquery/jquery.min.js"></script>
-<!-- Bootstrap tether Core JavaScript -->
-<script src="<?php echo HSP_ASSET_URL ?>js/lib/bootstrap/js/popper.min.js"></script>
-<script src="<?php echo HSP_ASSET_URL ?>js/lib/bootstrap/js/bootstrap.min.js"></script>
-<!-- slimscrollbar scrollbar JavaScript -->
-<script src="<?php echo HSP_ASSET_URL ?>js/jquery.slimscroll.js"></script>
-<!--Menu sidebar -->
-<script src="<?php echo HSP_ASSET_URL ?>js/sidebarmenu.js"></script>
-<!--stickey kit -->
-<script src="<?php echo HSP_ASSET_URL ?>js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
-<!--Custom JavaScript -->
-<script src="<?php echo HSP_ASSET_URL ?>js/custom.min.js"></script>
+    jQuery(document).ready(function($){
+        $(".nav-item").click(function(){
+            $(".nav-link ").addClass("active");
+        });
+    });
+</script>
+<!-- jQuery -->
+<script src="<?php echo HSP_ASSET_URL ?>js/jquery.min.js"></script>
+<script src="<?php echo HSP_ASSET_URL ?>js/bootstrap.bundle.min.js"></script>
+<script src="<?php echo HSP_ASSET_URL ?>js/adminlte.min.js"></script>
 </body>
 </html>
