@@ -4,7 +4,7 @@ include "Handler.php";
 include HSP_DIR . 'view.class.php';
 
 
-class DashboardHandler extends Handler
+class DashHandler extends Handler
 {
     public function __construct()
     {

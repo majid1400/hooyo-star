@@ -15,7 +15,7 @@ class Router
 
     private function dispatch_request($request_uri)
     {
-        if (!strpos($request_uri, 'dashboard')) {
+        if (!strpos($request_uri, 'dash')) {
             return;
         }
         if (!is_user_logged_in()){
