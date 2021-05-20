@@ -25,7 +25,7 @@ class DashHandler extends Handler
         $current_id = get_current_user_id();
 
         $user_number_question = $wpdb->get_results("
-                SELECT `child_name`
+                SELECT `child_name`, `statistic_ref_id`
 				FROM {$wpdb->prefix}data_form_hooyo_star
 				WHERE user_id={$current_id}");
         return $user_number_question;
