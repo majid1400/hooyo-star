@@ -14,11 +14,11 @@
             <?php for ($i = 1; $i <= 6; $i++): ?>
                 <div class="col-lg-1-mb">
                     <a href="<?= add_query_arg(["month" => $i]) ?>">
-                    <div class="dashboard">
-                        <p>بازی، کتاب، مقاله، اسباب‌بازی برای ماه</p>
-                        <img src="<?php echo HSP_ASSET_URL ?>icons/number-<?= $i ?>.svg" alt="sd" width="80"
-                             height="80">
-                    </div>
+                        <div class="dashboard">
+                            <p>بازی، کتاب، مقاله، اسباب‌بازی برای ماه</p>
+                            <img src="<?php echo HSP_ASSET_URL ?>icons/number-<?= $i ?>.svg" alt="sd" width="80"
+                                 height="80">
+                        </div>
                     </a>
                 </div>
 
@@ -26,8 +26,43 @@
 
             <div class="col-lg-4">
                 <div class="dashboard">
-                    <p>بازی، کتاب، مقاله، اسباب‌بازی برای ماه</p>
-                    <img src="<?php echo HSP_ASSET_URL ?>icons/number-1.svg" alt="sd" width="80" height="80">
+                    <script>
+                        window.onload = function () {
+
+                            var chart = new CanvasJS.Chart("chartContainer", {
+                                animationEnabled: true,
+                                theme: "light2",
+                                axisY: {
+                                    includeZero: true
+                                },
+                                legend: {
+                                    cursor: "pointer",
+                                    verticalAlign: "top",
+                                    horizontalAlign: "right",
+                                    itemclick: toggleDataSeries
+                                },
+                                data: [{
+                                    type: "column",
+                                    name: "تست هوش گاردنر <?= $result->child_name ?> ",
+                                    indexLabel: "%{y}",
+                                    showInLegend: true,
+                                    dataPoints: <?php echo json_encode($chart, JSON_NUMERIC_CHECK); ?>
+                                }]
+                            });
+                            chart.render();
+
+                            function toggleDataSeries(e) {
+                                if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                                    e.dataSeries.visible = false;
+                                } else {
+                                    e.dataSeries.visible = true;
+                                }
+                                chart.render();
+                            }
+
+                        }
+                    </script>
+                    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
                 </div>
             </div>
 
@@ -37,7 +72,7 @@
         <br>
 
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-8" style="margin-top: -226px;">
                 <div class="row">
                     <h5 class="col-12 center card-title mb-2 text-bold">تفسیر و توضیح نتیجه</h5>
                 </div>

@@ -340,6 +340,9 @@ ul {
 .col-6 {
     margin-bottom: 18px;
 }
+#chartContainer > div > a {
+    display: none;
+}
 pre {
     text-align: left;
     direction: ltr;

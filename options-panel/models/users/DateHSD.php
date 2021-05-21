@@ -15,7 +15,7 @@ class DateHSD {
 
 	public function save_date() {
 
-		if ( isset( $_POST['save_date'] ) ) {
+		if ( isset( $_POST['save_date'] ) or isset($_POST['save_selected_hosh_age'])) {
 			$is_save = false;
 			$date    = [
 				'date_1' => [ 'show_user' => '', 'show_date' => '' ],

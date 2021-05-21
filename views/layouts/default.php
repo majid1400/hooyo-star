@@ -71,5 +71,6 @@
 <script src="<?php echo HSP_ASSET_URL ?>js/jquery.min.js"></script>
 <script src="<?php echo HSP_ASSET_URL ?>js/bootstrap.bundle.min.js"></script>
 <script src="<?php echo HSP_ASSET_URL ?>js/adminlte.min.js"></script>
+<script src="<?php echo HSP_ASSET_URL ?>js/canvasjs.min.js"></script>
 </body>
 </html>

@@ -15,10 +15,13 @@ class ResultHandler extends Handler
     public function index()
     {
         include HSP_OPTION . 'woocamerceApi/APIWOO.php';
+        include HSP_OPTION . 'tools/jdf.php';
         $params = [
             "result" => $this->get_result_question()[0],
             "toys" => $this->get_result_toy_handler(),
-            "focus_month" => $this->data_sort()
+            "focus_month" => $this->data_sort(),
+            "time_now" => $this->get_time_now(),
+            "chart" => $this->get_chart()
         ];
         if ($_GET['month']) {
             View::load('panel.result.month', $params);
@@ -206,6 +209,89 @@ class ResultHandler extends Handler
             }
         }
         return $res;
+    }
+
+    public function get_time_now()
+    {
+        $month = jdate("m");
+        switch ($month) {
+            case "01":
+                return jdate("Y/" . '1' . "/d");
+                break;
+            case "02":
+                return jdate("Y/" . '2' . "/d");
+                break;
+            case "03":
+                return jdate("Y/" . '3' . "/d");
+                break;
+            case "04":
+                return jdate("Y/" . '4' . "/d");
+                break;
+            case "05":
+                return jdate("Y/" . '5' . "/d");
+                break;
+            case "06":
+                return jdate("Y/" . '6' . "/d");
+                break;
+            case "07":
+                return jdate("Y/" . '7' . "/d");
+                break;
+            case "08":
+                return jdate("Y/" . '8' . "/d");
+                break;
+            case "09":
+                return jdate("Y/" . '9' . "/d");
+                break;
+            default:
+                return jdate("Y/m/d");
+
+        }
+    }
+
+    public function get_chart()
+    {
+        $r = unserialize($this->get_result_question()[0]->info_user)[0]["percentage_test"];
+
+        $dataPoints1 = [];
+        foreach ($r as $ke => $value) {
+
+            $dataPoints1[] = [
+                "label" => $this->convert_hosh($ke), "y" => $value,
+            ];
+        }
+
+        return $dataPoints1;
+    }
+
+    public function convert_hosh($ke)
+    {
+        switch ($ke) {
+            case "kalami":
+                return $ke = "کلامی زبانی";
+                break;
+            case "logical":
+                return $ke = "منطقی ریاضی";
+                break;
+            case "pic":
+                return $ke = "تصویری فضایی";
+                break;
+            case "motion":
+                return $ke = "حرکتی جنبشی";
+                break;
+            case "music":
+                return $ke = "موسیقیایی";
+                break;
+            case "miyanFardi":
+                return $ke = "میان فردی";
+                break;
+            case "daronFardi":
+                return $ke = "درون فردی";
+                break;
+            case "naturalist":
+                return $ke = "طبیعت گرا";
+                break;
+        }
+        return "";
     }
 
 

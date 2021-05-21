@@ -146,15 +146,20 @@ class DBHandler {
 			$housh = [];
 			$age   = [];
 			$status_date = $this->get_date_d();
-
-
 			return [ $housh, $age, $status_date ];
 		}
+
+		if (!unserialize( $result[0]->status_date )){
+            $housh = [];
+            $age   = [];
+            $status_date = $this->get_date_d();
+            return [ $housh, $age, $status_date ];
+        }
 
 		if (unserialize( $result[0]->status_date )["date_1"]["show_user"] == "no"){
             $housh       = unserialize( $result[0]->data_form_hooyo_star )[0];
             $age         = unserialize( $result[0]->data_form_hooyo_star )[1];
-            $status_date = $this->get_date_d();
+            $status_date = unserialize( $result[0]->status_date );
 
 
             return [ $housh, $age, $status_date ];
