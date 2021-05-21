@@ -316,13 +316,14 @@ ul {
     background-color: #1bbbea;
     padding: 3px 17px;
     border-radius: 16px;
+    font-size: 11px;
 }
 .btn-more-month{
     color: white;
     background-color: #ff6a69;
     padding: 3px 17px;
     border-radius: 16px;
-    font-size: 12px;
+    font-size: 10px;
 }
 .p-month{
     color: #ff6a69;
@@ -343,10 +344,15 @@ ul {
 #chartContainer > div > a {
     display: none;
 }
+
+.tafsir{
+    margin-top: 0px;
+}
 pre {
     text-align: left;
     direction: ltr;
 }
+
 
 @media (min-width: 1200px){
     .container-mb {
@@ -364,6 +370,9 @@ pre {
         flex: 0 0 10.333333%;
         max-width: 10.333333%;
         margin-left: 10px;
-        font-size: 14px;
+        font-size: 11px;
+    }
+    .tafsir{
+        margin-top: -226px;
     }
 }

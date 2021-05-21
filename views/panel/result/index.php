@@ -12,7 +12,7 @@
         <div class="row">
 
             <?php for ($i = 1; $i <= 6; $i++): ?>
-                <div class="col-lg-1-mb">
+                <div class="col-lg-1-mb col-6">
                     <a href="<?= add_query_arg(["month" => $i]) ?>">
                         <div class="dashboard">
                             <p>بازی، کتاب، مقاله، اسباب‌بازی برای ماه</p>
@@ -24,7 +24,7 @@
 
             <?php endfor; ?>
 
-            <div class="col-lg-4">
+            <div class="col-12 col-lg-4">
                 <div class="dashboard">
                     <script>
                         window.onload = function () {
@@ -72,7 +72,7 @@
         <br>
 
         <div class="row">
-            <div class="col-lg-8" style="margin-top: -226px;">
+            <div class="col-lg-8 tafsir">
                 <div class="row">
                     <h5 class="col-12 center card-title mb-2 text-bold">تفسیر و توضیح نتیجه</h5>
                 </div>
@@ -109,7 +109,7 @@
 
             <?php $housh = ['کلامی زبان', 'منطقی ریاضی', 'موسیقیایی', 'میان فردی', 'طبیعت گرا', 'درون فردی', 'حرکتی جنبشی', 'تصویری فضایی'] ?>
             <?php for ($i = 1; $i <= 8; $i++): ?>
-                <div class="col-lg-1-mb">
+                <div class="col-6 col-lg-1-mb">
                     <div class="dashboard">
 
                         <img src="<?php echo HSP_ASSET_URL ?>icons/number-<?= $i ?>.svg" alt="sd" width="80"

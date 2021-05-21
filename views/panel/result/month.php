@@ -13,7 +13,7 @@ $show_date = unserialize($result->status_date)["date_" . $m]["show_date"];
                     <br>
 
                     <div class="row">
-                        <h5 class="col-12 center card-title mb-2 text-bold">ماه <?= $m ?> قراره چه کار کنیم؟</h5>
+                        <h5 class="col-lg-12 center card-title mb-2 text-bold">ماه <?= $m ?> قراره چه کار کنیم؟</h5>
                     </div>
                     <div class="row">
                         <p>
@@ -23,13 +23,13 @@ $show_date = unserialize($result->status_date)["date_" . $m]["show_date"];
 
                     <div class="container">
                         <div class="row">
-                            <div class="col-3">
+                            <div class="col-lg-3">
 
                             </div>
-                            <div class="col-4">
+                            <div class="col-lg-4">
 
                             </div>
-                            <div class="col-5 align-items-center">
+                            <div class="col-12 col-lg-5 align-items-center">
                                 <p class="col-12 karshenas" style="text-align: center">
                                     در صورت نیاز به توضیحات بیشتر با کارشناس یا روانشناس خود در ارتباط باشین.
                                     <img src="<?= HSP_ASSET_URL ?>icons/chat.png" alt="chat" width="25"
@@ -42,7 +42,7 @@ $show_date = unserialize($result->status_date)["date_" . $m]["show_date"];
 
                     <!-- games -->
                     <div class="row">
-                        <h5 class="col-12 center card-title mb-2 text-bold">اسباب بازی های پیشنهادی</h5>
+                        <h5 class="col-lg-12 center card-title mb-2 text-bold">اسباب بازی های پیشنهادی</h5>
                     </div>
                     <br>
                     <div class="row">
@@ -51,7 +51,7 @@ $show_date = unserialize($result->status_date)["date_" . $m]["show_date"];
                         <br>
                         <?php foreach ($games as $game): ?>
                             <?php if ($game->month == $m): ?>
-                                <div class="col-lg-2">
+                                <div class="col-6 col-lg-2">
                                     <div class="dashboard" style="filter: blur(6px)">
                                         <img src="<?= $game->img ?>" width="80" height="80">
                                         <p class="p-month-titr">اجازه نمایش وجود ندارد</p>
@@ -76,7 +76,7 @@ $show_date = unserialize($result->status_date)["date_" . $m]["show_date"];
                         <br>
                         <?php foreach ($books as $book): ?>
                             <?php if ($book->month == $m): ?>
-                                <div class="col-lg-2">
+                                <div class="col-6 col-lg-2">
                                     <div class="dashboard" style="filter: blur(6px)">
                                         <img src="<?= $book->img ?>" width="80" height="80">
                                         <p class="p-month-titr">اجازه نمایش وجود ندارد</p>
@@ -101,7 +101,7 @@ $show_date = unserialize($result->status_date)["date_" . $m]["show_date"];
                         <br>
                         <?php foreach ($blogs as $blog): ?>
                             <?php if ($blog->month == $m): ?>
-                                <div class="col-lg-2">
+                                <div class="col-6 col-lg-2">
                                     <div class="dashboard" style="filter: blur(6px)">
                                         <img src="<?= $blog->img ?>" width="80" height="80">
                                         <p class="p-month-titr">اجازه نمایش وجود ندارد</p>
@@ -125,7 +125,7 @@ $show_date = unserialize($result->status_date)["date_" . $m]["show_date"];
                     <br>
 
                     <div class="row">
-                        <h5 class="col-12 center card-title mb-2 text-bold">ماه <?= $m ?> قراره چه کار کنیم؟</h5>
+                        <h5 class="col-lg-12 center card-title mb-2 text-bold">ماه <?= $m ?> قراره چه کار کنیم؟</h5>
                     </div>
                     <div class="row">
                         <p>
@@ -150,13 +150,13 @@ $show_date = unserialize($result->status_date)["date_" . $m]["show_date"];
 
                     <div class="container">
                         <div class="row">
-                            <div class="col-3">
+                            <div class="col-lg-3">
 
                             </div>
-                            <div class="col-4">
+                            <div class="col-lg-4">
 
                             </div>
-                            <div class="col-5 align-items-center">
+                            <div class="col-12 col-lg-5 align-items-center">
                                 <p class="col-12 karshenas" style="text-align: center">
                                     در صورت نیاز به توضیحات بیشتر با کارشناس یا روانشناس خود در ارتباط باشین.
                                     <img src="<?= HSP_ASSET_URL ?>icons/chat.png" alt="chat" width="25"
@@ -178,7 +178,7 @@ $show_date = unserialize($result->status_date)["date_" . $m]["show_date"];
                         <br>
                         <?php foreach ($games as $game): ?>
                             <?php if ($game->month == $m): ?>
-                                <div class="col-lg-2">
+                                <div class="col-6 col-lg-2">
                                     <a href="<?= $game->permalink ?>">
                                         <div class="dashboard">
                                             <img src="<?= $game->img ?>" width="80" height="80">
@@ -206,7 +206,7 @@ $show_date = unserialize($result->status_date)["date_" . $m]["show_date"];
                         <br>
                         <?php foreach ($books as $book): ?>
                             <?php if ($book->month == $m): ?>
-                                <div class="col-lg-2">
+                                <div class="col-6 col-lg-2">
                                     <a href="<?= $book->permalink ?>">
                                         <div class="dashboard">
                                             <img src="<?= $book->img ?>" width="80" height="80">
@@ -234,7 +234,7 @@ $show_date = unserialize($result->status_date)["date_" . $m]["show_date"];
                         <br>
                         <?php foreach ($blogs as $blog): ?>
                             <?php if ($blog->month == $m): ?>
-                                <div class="col-lg-2">
+                                <div class="col-6 col-lg-2">
                                     <a href="<?= $blog->permalink ?>">
                                         <div class="dashboard">
                                             <img src="<?= $blog->img ?>" width="80" height="80">
