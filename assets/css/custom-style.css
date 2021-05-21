@@ -300,14 +300,67 @@ ul {
     text-align: center;
 }
 
+.tafsit{
+    padding: 20px 70px;
+    text-align: justify;
+    line-height: 2;
+}
+.karshenas{
+    padding: 38px;
+    color: #1bbbea;
+    font-weight: bold;
+}
+
+.btn-more{
+    color: white;
+    background-color: #1bbbea;
+    padding: 3px 17px;
+    border-radius: 16px;
+}
+.btn-more-month{
+    color: white;
+    background-color: #ff6a69;
+    padding: 3px 17px;
+    border-radius: 16px;
+    font-size: 12px;
+}
+.p-month{
+    color: #ff6a69;
+    font-weight: bold;
+}
+.p-month-titr{
+    color: black;
+    margin-top: 25px;
+}
+.ho{
+    color: #1bbbea;
+    font-weight: bold;
+}
+
+.col-6 {
+    margin-bottom: 18px;
+}
+pre {
+    text-align: left;
+    direction: ltr;
+}
+
+@media (min-width: 1200px){
+    .container-mb {
+        max-width: 1295px;
+    }
+}
+
 @media (min-width: 567px) {
     .col-lg-2-mb {
         flex: 0 0 17.666667%;
         max-width: 17.666667%;
         margin-bottom: 10px;
     }
-}
-
-.col-6 {
-    margin-bottom: 18px;
+    .col-lg-1-mb {
+        flex: 0 0 10.333333%;
+        max-width: 10.333333%;
+        margin-left: 10px;
+        font-size: 14px;
+    }
 }

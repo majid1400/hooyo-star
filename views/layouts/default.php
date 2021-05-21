@@ -40,26 +40,24 @@
                                     02191070567
                                 </a></li>
                             <li class="basket"><a class="ry-basket-href login_modal">
-                                    <i class="fa fa-user"></i>
+<!--                                    <i class="fa fa-user"></i>-->
+                                    <img src="<?= HSP_ASSET_URL ?>icons/user.png" alt="chat" width="20"
+                                         height="20">
                                 </a></li>
                             <li class="basket"><a class="ry-basket-href login_modal">
-                                    <i class="fa fa-shopping-cart"></i>
+<!--                                    <i class="fa fa-shopping-cart"></i>-->
+                                    <img src="<?= HSP_ASSET_URL ?>icons/shopping-cart.png" alt="chat" width="20"
+                                         height="20">
                                 </a></li>
                         </ol>
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
-            </div><!-- /.container-fluid -->
-        </div>
-        <!-- /.content-header -->
-
-        <!-- Main content -->
-        <div class="content">
-            <div class="container">
-                <div class="row justify-content-md-center">
-                    <?php include HSP_VIEWS . $view; ?>
+                    </div>
                 </div>
-                <!-- /.row -->
-            </div><!-- /.container-fluid -->
+            </div>
+        </div>
+
+
+        <div class="content">
+            <?php include HSP_VIEWS . $view; ?>
         </div>
         <!-- /.content -->
     </div>
